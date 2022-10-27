@@ -1,2 +1,2 @@
-# Projeto-JS-Origamid
-Curso js origamid
+# Projetos-Origamid
+Cursos origamid
