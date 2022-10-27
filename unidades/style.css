@@ -1,0 +1,28 @@
+a {
+  text-decoration: none;
+  color: #fff;
+  background-color: darkblue;
+  display: inline-block;
+}
+
+a:focus {
+  background-color: aquamarine;
+  transition: 1.2s;
+}
+
+a:active {
+  background-color: blueviolet;
+}
+
+p {
+  background: lightblue;
+}
+
+.px {
+  font-size: 24px;
+}
+
+.rem {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
