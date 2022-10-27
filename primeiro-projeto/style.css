@@ -1,7 +1,29 @@
+:root {
+  --cor-primaria: #e21;
+  --cor-secundaria-escura: #900;
+  --fundo-1: #f7f7f7;
+  --fundo-2: #ffffff;
+  --texto: #000;
+  --subtitulo: rgba(0, 0, 0, 0.2);
+  --onda: url("../primeiro-projeto/img/onda-clara.svg");
+  --cor-botao: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo-1: #111111;
+    --fundo-2: #000000;
+    --texto: #ffffff;
+    --subtitulo: rgba(255, 255, 255, 0.2);
+    --onda: url("../primeiro-projeto/img/onda-escura.svg");
+    --cor-botao: #ffffff;
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background-color: #f7f7f7;
+  background-color: var(--fundo-1);
   display: grid;
   gap: 60px;
   justify-items: center;
@@ -50,16 +72,16 @@ p {
 }
 
 .menu a {
-  background: #fff;
+  background: var(--fundo-2);
   padding: 1rem 3rem;
-  color: #000;
+  color: var(--texto);
   box-sizing: content-box;
   text-transform: uppercase;
-  border: 2px solid #fff;
+  border: 2px solid var(--fundo-2);
 }
 
 .menu a:hover {
-  border: 2px solid #e21;
+  border: 2px solid var(--cor-primaria);
 }
 
 .conteudo {
@@ -69,7 +91,7 @@ p {
 }
 
 .introducao {
-  background: #fff;
+  background: var(--fundo-2);
   align-content: center;
   position: relative;
   padding: 40px;
@@ -91,7 +113,7 @@ p {
 .introducao::before {
   width: 60px;
   height: 4px;
-  background-color: #e21;
+  background-color: var(--cor-primaria);
   position: absolute;
   top: 30px;
   right: -30px;
@@ -99,29 +121,29 @@ p {
 }
 
 .botao {
-  background-color: #e21;
-  color: #fff;
+  background-color: var(--cor-primaria);
+  color: var(--cor-botao);
   border-radius: 4px;
   padding: 1rem 3rem;
   text-transform: uppercase;
 }
 
 .botao:hover {
-  background-color: #900;
+  background-color: var(--cor-secundaria-escura);
 }
 
 .subtitulo {
   font-size: 4rem;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.2);
+  color: var(--subtitulo);
   text-align: right;
   padding: 40px;
   align-self: center;
-  background: url("/primeiro-projeto/img/onda.svg");
+  background: var(--onda);
 }
 
 .vantagens {
-  background-color: #fff;
+  background-color: var(--fundo-2);
   padding: 40px;
 }
 
@@ -130,14 +152,15 @@ p {
   grid-template-columns: auto 1fr;
   gap: 10px 20px;
   padding: 1.25rem;
+  color: var(--texto);
 }
 
 .vantagens-item:nth-child(odd) {
-  background-color: #f7f7f7;
+  background-color: var(--fundo-1);
 }
 
 .vantagens-item:hover {
-  border-left: 4px solid #e21;
+  border-left: 4px solid var(--cor-primaria);
 }
 
 .vantagens-item p {
@@ -145,11 +168,12 @@ p {
 }
 
 .rodape {
-  background: fff;
+  background: var(--fundo-2);
   width: 100%;
   text-align: center;
   padding: 40px;
   box-sizing: border-box;
+  color: var(--texto);
 }
 
 @media (max-width: 1024px) {
